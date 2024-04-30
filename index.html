@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Button</title>
+  </head>
+  <body>
+    <div class="whole">
+    <div id="outputs" class="output"></div>
+    <h2 id="countss"></h2>
+    <button id="click" onclick="clicks()">Click</button>
+    <button class="reset" id="reset" onclick="resets()">Reset</button>
+    <button class="red" id="red" onclick="reds()">Red</button>
+    <button class="blue" id="blue" onclick="blue()">Blue</button>
+    </div>
+    <script>
+        var click=document.getElementById("click");
+        var output=document.getElementById("outputs")
+        var countss=document.getElementById("countss");
+        var resets=document.getElementById("reset")
+        var reds=document.getElementById("red")
+        var count=0;
+        
+        function clicks()
+        {
+            count++
+            countss.innerHTML="count:"+count;
+            
+            if(count==5)
+            {
+                output.style="border-radius:100%;"
+                 output.style="height:300px;"
+                output.style="width:400px;"
+            }
+            if(count%2==0)
+            {
+                output.style.backgroundColor="black"
+                output.style="height:200px;"
+                output.style="width:200px;"
+            }
+            if(count!==count*5&&count%2!==0)
+            {
+                output.style.backgroundColor="black"
+                output.style="height:300px;"
+                output.style="width:400px;"
+            }
+           
+          
+        }
+        function resets()
+        {
+          countss.innerHTML=a;
+        }
+   function reds(){
+          output.style.background="red;"
+   }
+   function blue(){
+    output.style.background="blue;"
+   }
+    </script>
+  </body>
+</html>
